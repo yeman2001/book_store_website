@@ -1,0 +1,123 @@
+.container-rv {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    background-color: blueviolet;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.content-left {
+    width: 25%;
+    padding: 2rem;
+    position: relative;
+    /* Added to make the absolute positioning work relative to this container */
+}
+
+.content-left .price {
+    font-size: x-large;
+    background-color: gold;
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: -2rem;
+}
+
+.content-left img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.content-left input {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.content-left .stars i {
+    width: 30px;
+    color: yellow;
+    margin-top: 10px;
+}
+
+.content-left .btn {
+    color: black;
+    background-color: yellow;
+    width: 100%;
+}
+
+.content-left p {
+    font-size: medium;
+    margin-top: 2rem;
+    color: white;
+}
+
+hr {
+    color: white;
+    border: 1px solid;
+}
+
+.content-right {
+    width: 70%;
+    padding: 2rem;
+}
+
+.content-right p {
+    font-size: medium;
+    margin: 2rem 2rem;
+    text-align: justify;
+    color: white;
+}
+
+.content-right h1 {
+    font-size: xx-large;
+    padding-left: 2rem;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container-rv,
+    .content-left {
+        width: 100%;
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    .content-left img {
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .content-left input,
+    .content-left .btn {
+        width: 100%;
+    }
+
+    .content-right {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .container-rv {
+        flex-direction: column;
+        position: relative;
+        /* Set back to relative positioning */
+        z-index: 1;
+        /* Set back to 1 for consistency */
+    }
+
+    .product-form {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}

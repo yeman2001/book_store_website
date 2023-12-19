@@ -1,0 +1,9 @@
+.container-intro {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.container-intro img {
+    height: 10rem;
+}

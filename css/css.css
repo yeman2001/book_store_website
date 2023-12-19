@@ -1,0 +1,182 @@
+#sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    background-color: #333;
+    padding-top: 20px;
+    color: white;
+    transition: margin-left 0.3s;
+}
+
+#content {
+    margin-left: 250px;
+    padding: 16px;
+    transition: margin-left 0.3s;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+li,
+a {
+    padding: 8px;
+    cursor: pointer;
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: medium;
+
+}
+
+li:hover {
+    background-color: #555;
+}
+
+h1 {
+    color: #333;
+}
+
+.toggle-btn {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+
+    .toggle-btn:checked+#sidebar {
+        margin-left: 0;
+    }
+}
+
+/* New styles for the toggle button */
+#toggle-btn-label {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 2rem;
+    width: 50px;
+    color: var(--purple);
+}
+
+#toggle-btn-label:hover {
+    color: #fff;
+}
+
+/* New styles for the modal */
+.con-user {
+    background-color: #4caf50;
+
+}
+
+#userModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    width: 300px;
+    height: 200px;
+
+
+}
+
+#userModal h2 {
+    color: #333;
+}
+
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+/* Styles for the form within the modal */
+#userForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#userForm label {
+    font-weight: bold;
+}
+
+#userForm input {
+    padding: 5px;
+}
+
+#submitBtn {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+a:hover {
+    text-decoration: underline;
+    /* Add underline on hover for the links */
+}
+
+#userForm {
+    font-family: 'Arial', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.account-box {
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+}
+
+span {
+    font-weight: bold;
+    color: #007bff;
+    /* or any other color you prefer */
+}
+
+.logout_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout_btn:hover {
+    background-color: #0056b3;
+    /* darker shade on hover */
+}
